@@ -10,4 +10,3 @@ Simple notes built with mpvue.
 #### Page three:
 * Simple personal pages, you can see the collection of notes and shared video resources, you can choose to change the theme color, but also use the local cache of locaStrong, with information about this APP.
 
-###
