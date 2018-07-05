@@ -93,36 +93,18 @@
 				wx.showLoading({
 					title: '加载中',
 				})
-				let value = wx.getStorageSync("web_article_list")
-				if(value && value.length >= (this.page+1) * this.limit) {
-					let art_arr = []
-					wx.hideLoading()
-					for(let i = this.page * this.limit, len = (this.page + 1) * this.limit; i < len; i++) {
-						art_arr.push(value[i])
-					}
-					this.page++
-						if(this.loading) {
-							store.commit("clearArticle")
-							this.loading = false
-						}
-					store.commit('putArticleForLoca', art_arr)
-				} else {
-					this.loadData()
-				}
-			},
-			loadData() {
 				this.$http.get(api.getArticle(this.page + 1, this.limit, this.type)).then((res) => {
-					wx.hideLoading()
-					this.page++
-						if(this.loading) {
-							store.commit("clearArticle")
-							this.loading = false
-						}
-					store.commit('putArticle', res.result.data)
-					if(res.result.data.length < this.limit) {
-						this.noanymore = true
-					}
-				})
+                    wx.hideLoading()
+                    this.page++
+                        if(this.loading) {
+                            store.commit("clearArticle")
+                            this.loading = false
+                        }
+                    store.commit('putArticle', res.result.data)
+                    if(res.result.data.length < this.limit) {
+                        this.noanymore = true
+                    }
+                })
 			},
 			getuser(e) {
 				if(e.target.errMsg == "getUserInfo:ok") {

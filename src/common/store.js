@@ -100,24 +100,6 @@ const store = new Vuex.Store({
 	mutations: {
 		putArticle(state, list) {
 			let art_list = []
-			wx.getStorage({
-				key: 'web_article_list',
-				complete: function(res) {
-					if(res.errMsg == "getStorage:ok") {
-						art_list = res.data
-					}
-					for(let i = 0, len = list.length; i < len; i++) {
-						state.article.push(list[i])
-						art_list.push(list[i])
-					}
-					wx.setStorage({
-						key: "web_article_list",
-						data: art_list
-					})
-				}
-			})
-		},
-		putArticleForLoca(state, list) {
 			for(let i = 0, len = list.length; i < len; i++) {
 				state.article.push(list[i])
 			}
