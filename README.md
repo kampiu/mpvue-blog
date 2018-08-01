@@ -1,12 +1,21 @@
-# mpvue Web小前端
-Simple notes built with mpvue.
+# web
 
-#### Page one:
-* Simple swiper and notebook component construction, visual skeleton screen effect, enable pull up loading, use vuex one-way database flow.
+> Web
 
-#### Page two:
-* A simple search page, the type of note that reduces the number of HTTP requests by locaStrong local caching, can search the description or title of notes by labels or keywords.
+## Build Setup
 
-#### Page three:
-* Simple personal pages, you can see the collection of notes and shared video resources, you can choose to change the theme color, but also use the local cache of locaStrong, with information about this APP.
+``` bash
+# install dependencies
+npm install
 
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

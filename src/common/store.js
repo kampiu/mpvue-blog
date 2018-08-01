@@ -83,7 +83,7 @@ const store = new Vuex.Store({
 		usercollection: [],
 		sharelist: [],
 		swiper: [],
-		isLogin: true
+		isLogin: false
 	},
 	getters: {
 		article: state => state.article,
@@ -98,6 +98,9 @@ const store = new Vuex.Store({
 		isLogin: state => state.isLogin
 	},
 	mutations: {
+		toggleLogin(state, bool){
+			state.isLogin = bool
+		},
 		putArticle(state, list) {
 			let art_list = []
 			for(let i = 0, len = list.length; i < len; i++) {
@@ -216,9 +219,10 @@ const store = new Vuex.Store({
 			if(!str || str == "") {
 				return
 			}
-			state.userInfo.art = str.split(",")
+			state.userInfo.art = str
 		},
 		changeTheme(state, theme) {
+			console.log(theme,"!!!!!!")
 			state.userInfo.theme = theme 
 			//			wx.setTabBarStyle({
 			//				selectedColor: theme

@@ -55,6 +55,7 @@
 				})
 				this.type = e.target.dataset.name
 				this.$http.get(api.getArticle(1, 10, e.target.dataset.name)).then((res) => {
+				    console.log(res,"SEARCH")
 					this.toBeGo(res, false, this.type)
 				}).catch((err) => {
 					console.log(err)
@@ -74,9 +75,10 @@
 				})
 				this.$http.post(api.searchArt(), {
 					word: this.words
-				}).then((res) => {
+				}).then(res => {
+				    console.log(res)
 					this.toBeGo(res, true, this.words)
-				}).catch((err) => {
+				}).catch(err => {
 					console.log(err)
 				})
 			},
@@ -84,8 +86,8 @@
 				this.words = e.target.value
 			},
 			toBeGo(res, bool, data) {
-				if(res.code === 200 && res.result.data.length > 0) {
-					store.commit("updateSearch", res.result.data)
+				if(res.code === 200 && res.result.data.data.length > 0) {
+					store.commit("updateSearch", res.result.data.data)
 					wx.hideLoading()
 					wx.navigateTo({
 						url: './../articleList/main?type=' + bool + '&word=' + data

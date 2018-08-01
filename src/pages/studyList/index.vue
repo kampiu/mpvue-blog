@@ -44,8 +44,9 @@
 					title: '加载中...',
 				})
 				this.$http.get(api.getshare()).then((res) => {
+				    console.log(res)
 					if(res.code === 200) {
-						store.commit("initShare",res.result.data)
+						store.commit("initShare",res.result.data.data)
 						wx.hideLoading()
 					}
 				}).catch((err) => {

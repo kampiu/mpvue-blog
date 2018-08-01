@@ -46,7 +46,7 @@
 			}
 		},
 		onLoad() {
-			this.login()
+//			this.login()
 		},
 		created() {
 
