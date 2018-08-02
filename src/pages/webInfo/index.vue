@@ -17,14 +17,14 @@
 			</div>
 			<div class="info-item-title">关于作者</div>
 			<div class="info-item icon-github" @click="showmsg" data-title="https://github.com/kampiu" data-index="3" data-img="./../../image/github.png">
-				GITHUB:kampiu
+				GITHUB: kampiu
 			</div>
 			<div class="info-item icon-web" @click="showmsg" data-title="http://www.billson.club" data-index="4" data-img="./../../image/web.png">
-				WebSide:Billson
+				WebSide: Billson
 			</div>
 			<div class="info-item-title">API接口</div>
 			<div class="info-item icon-api">
-				https://think.Billson.club
+				https://api.billson.club
 			</div>
 			<div class="info-item-title">注意事项</div>
 			<div class="info-item icon-warnning">

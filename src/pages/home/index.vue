@@ -114,14 +114,15 @@
                 }
             },
             getSwiper() {
-                let value = wx.getStorageSync("web_swiper_list")
-                if(value) {
-                    store.commit("initSwiper", value)
-                } else {
+//              let value = wx.getStorageSync("web_swiper_list")
+//              if(value) {
+//                  store.commit("initSwiper", value)
+//              } else {
                     this.$http.get(api.swiper()).then((res) => {
-                        store.commit("initSwiper", res.result.data)
+                        console.log(res)
+                        store.commit("initSwiper", res.result.data.data)
                     })
-                }
+//              }
             },
             login() {
                 let that = this

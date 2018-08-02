@@ -35,16 +35,16 @@
 		},
 		methods: {
 			init() {
-				let value = wx.getStorageSync("web_tab_list")
-				if(value){
-					store.commit("putTab", value)
-				}else{
+//				let value = wx.getStorageSync("web_tab_list")
+//				if(value){
+//					store.commit("putTab", value)
+//				}else{
 					this.$http.get(api.getTab()).then((res) => {
-						store.commit("putTab", res.result.data)
+						store.commit("putTab", res.result.data.data)
 					}).catch((err) => {
 						console.log(err)
 					})
-				}
+//				}
 			},
 			rand(min, max) {
 				return Math.floor(Math.random() * (max - min + 1)) + min
