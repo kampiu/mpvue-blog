@@ -222,50 +222,49 @@ const store = new Vuex.Store({
 			state.userInfo.art = str
 		},
 		changeTheme(state, theme) {
-			console.log(theme,"!!!!!!")
 			state.userInfo.theme = theme 
-			//			wx.setTabBarStyle({
-			//				selectedColor: theme
-			//			})
-			//			let strs = theme.replace("#", "")
-			//			for(let i = 0; i < 3; i++) {
-			//				let str = "",title = "",iconPath = ""
-			//				switch(i) {
-			//					case 0:
-			//						str = "./image/" + strs + "/home-select.png"
-			//						title = "首页"
-			//						iconPath = "./image/home.png"
-			//						console.log("进入第一次")
-			//						break
-			//					case 1:
-			//						str = "./image/" + strs + "/search-select.png"
-			//						title = "搜索"
-			//						iconPath = "./image/search.png"
-			//						console.log("进入第2次")
-			//						break
-			//					case 2:
-			//						str = "./image/" + strs + "/personal-select.png"
-			//						title = "个人"
-			//						iconPath = "./image/personal.png"
-			//						console.log("进入第3次")
-			//						break
-			//					default:
-			//						str = "./image/5179F1/home-select.png"
-			//						title = "首页"
-			//						iconPath = "./image/home.png"
-			//						console.log("进入默认")
-			//						break
-			//				}
-			//				wx.setTabBarItem({
-			//					index: i,
-			//					text:title,
-			//					iconPath:iconPath,
-			//					selectedIconPath: str,
-			//					success:function(res){
-			//						console.log("图片问题：",res)
-			//					}
-			//				})
-			//			}
+//						wx.setTabBarStyle({
+//							selectedColor: theme
+//						})
+//						let strs = theme.replace("#", "")
+//						for(let i = 0; i < 3; i++) {
+//							let str = "",title = "",iconPath = ""
+//							switch(i) {
+//								case 0:
+//									str = "./image/" + strs + "/home-select.png"
+//									title = "首页"
+//									iconPath = "./image/home.png"
+//									console.log("进入第一次")
+//									break
+//								case 1:
+//									str = "./image/" + strs + "/search-select.png"
+//									title = "搜索"
+//									iconPath = "./image/search.png"
+//									console.log("进入第2次")
+//									break
+//								case 2:
+//									str = "./image/" + strs + "/personal-select.png"
+//									title = "个人"
+//									iconPath = "./image/personal.png"
+//									console.log("进入第3次")
+//									break
+//								default:
+//									str = "./image/5179F1/home-select.png"
+//									title = "首页"
+//									iconPath = "./image/home.png"
+//									console.log("进入默认")
+//									break
+//							}
+//							wx.setTabBarItem({
+//								index: i,
+//								text:title,
+//								iconPath:iconPath,
+//								selectedIconPath: str,
+//								success:function(res){
+//									console.log("图片问题：",res)
+//								}
+//							})
+//						}
 			wx.setNavigationBarColor({
 				frontColor: '#ffffff',
 				backgroundColor: theme,

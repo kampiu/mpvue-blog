@@ -64,6 +64,7 @@
 			},
 			updatetheme(data) {
 				this.$http.post(api.changetheme(), data).then((res) => {
+					console.log(res)
 					if(res.code !== 200) {
 						this.updatetheme()
 					}
